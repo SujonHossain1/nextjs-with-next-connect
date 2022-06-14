@@ -1,7 +1,7 @@
-import connectDB from 'middleware/mongodb';
-import Faq from 'models/Faq';
 import { NextApiRequest, NextApiResponse } from 'next';
 import nc from 'next-connect';
+import connectDB from 'server/middleware/mongodb';
+import Faq from 'server/models/Faq';
 
 const handler = nc<NextApiRequest, NextApiResponse>()
     .get(async (req, res) => {

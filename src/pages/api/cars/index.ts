@@ -1,6 +1,6 @@
-import connectDB from 'middleware/mongodb';
-import Car from 'models/Car';
 import { NextApiRequest, NextApiResponse } from 'next';
+import connectDB from 'server/middleware/mongodb';
+import Car from 'server/models/Car';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const { method, body } = req;
