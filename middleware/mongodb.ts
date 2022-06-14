@@ -8,7 +8,7 @@ const connectDB =
             return handler(req, res);
         }
         // Use new db connection
-        await mongoose.connect('mongodb://localhost:27017/car-trader');
+        await mongoose.connect('mongodb://127.0.0.1:27017/car-trader');
         return handler(req, res);
     };
 

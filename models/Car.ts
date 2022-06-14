@@ -34,5 +34,5 @@ const carSchema = new Schema<ICar>({
     },
 });
 
-const Car = models.Car || model<ICar>('car', carSchema);
+const Car = models.Car || model<ICar>('Car', carSchema);
 export default Car;
