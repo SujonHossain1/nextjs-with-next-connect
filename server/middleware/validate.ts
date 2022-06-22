@@ -1,10 +1,10 @@
-import { NextApiHandler, NextApiResponse } from 'next';
+import { NextApiResponse } from 'next';
 import { ObjectShape, OptionalObjectSchema } from 'yup/lib/object';
 import { NextApiRequestExtend } from './handler';
 
 export const validate = (
     schema: OptionalObjectSchema<ObjectShape>,
-    handler: NextApiHandler
+    handler: any
 ) => {
     return async (req: NextApiRequestExtend, res: NextApiResponse) => {
         const { method } = req;

@@ -7,11 +7,6 @@ const personSchema = new Schema<IPerson>(
             type: String,
             required: true,
         },
-        age: {
-            type: Number,
-            min: 18,
-            required: true,
-        },
         email: {
             type: String,
             required: true,
