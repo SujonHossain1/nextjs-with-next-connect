@@ -1,7 +1,17 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { useDispatch, useSelector } from 'react-redux';
+import { add } from 'src/store/cartSlice';
+import { RootState } from 'src/store/store';
 
 const Home: NextPage = () => {
+    const { cart } = useSelector((state: RootState) => state.cart);
+    const dispatch = useDispatch();
+
+    const addToCartHandler = () => {
+        dispatch(add({ name: 'string', price: 1, quantity: 1 }));
+    };
+
     return (
         <div>
             <Head>
